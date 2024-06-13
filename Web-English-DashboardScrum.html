@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>English-DashboardScrum</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Web-English-DashboardScrum</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14614,7 +14614,65 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.-Business-problem">1. Business problem<a class="anchor-link" href="#1.-Business-problem">&#182;</a></h2>
+<div id="sumario">
+  <h2>Summary</h2>
+  <ul>
+    <li><a href="#1">1. Business problem</a>
+    <li><a href="#2">2. Solution proposal</a>
+      <ul>
+        <li><a href="#21">2.1 Tools and cost</a></li>
+      </ul>
+    </li>
+    <li><a href="#3">3. Set up the source on Airbyte</a>
+    <li><a href="#4">4. Preparing the database</a>
+      <ul>
+        <li><a href="#41">4.1 Using Docker</a></li>
+        <li><a href="#42">4.2 Dockerfile build </a></li>
+        <li><a href="#43">4.3 Creating image and container on Docker</a></li>
+        <li><a href="#44">4.4 Accessing the database</a></li>
+      </ul>
+    </li>
+    <li><a href="#5">5. Set up the destination on Airbyte</a>
+    <li><a href="#6">6. CSet up the connection on Airbyte</a>
+    <li><a href="#7">7. Data transform</a>
+      <ul>
+        <li><a href="#71">7.1 Function that returns the sprint day count</a></li>
+        <li><a href="#72">7.2 Function that returns the estimated total hours of the sprint</a></li>
+        <li><a href="#73">7.3 Function that determines ideal planning line</a></li>
+        <li><a href="#74">7.4 Function that calculates remaining hours</a></li>
+        <li><a href="#75">7.5 View</a></li>
+      </ul>
+    </li>
+    <li><a href="#8">8. Data visualization</a>
+      <ul>
+        <li><a href="#81">8.1 Connection to PowerBi</a></li>
+        <li><a href="#82">8.2 Burndown with Time Spent Chart</a></li>
+      </ul>
+    </li>
+    <li><a href="#9">9. Updating the data</a>
+      <ul>
+        <li><a href="#91">9.1 Command to delete view (drop_view.sh)
+</a></li>
+        <li><a href="#92">9.2 Command to create view (create_view.sh)</a></li>
+        <li><a href="#93">9.3 Scheduling command in CRON (crontab)</a></li>
+        <li><a href="#94">9.4 Starting CRON in the container</a></li>
+        <li><a href="#95">9.5 Scheduling update in Airbyte</a></li>
+      </ul>
+    </li>
+    <li><a href="#10">10. Conclusion</a></li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Business-problem-">1. Business problem <a id="1" /><a class="anchor-link" href="#1.-Business-problem-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14637,7 +14695,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.-Solution-proposal">2. Solution proposal<a class="anchor-link" href="#2.-Solution-proposal">&#182;</a></h2>
+<h2 id="2.-Solution-proposal-">2. Solution proposal <a id="2" /><a class="anchor-link" href="#2.-Solution-proposal-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14674,7 +14732,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.1-Tools-and-cost">2.1 Tools and cost<a class="anchor-link" href="#2.1-Tools-and-cost">&#182;</a></h3>
+<h3 id="2.1-Tools-and-cost-">2.1 Tools and cost <a id="21" /><a class="anchor-link" href="#2.1-Tools-and-cost-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14706,7 +14764,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.-Set-up-the-source-on-Airbyte">3. Set up the source on Airbyte<a class="anchor-link" href="#3.-Set-up-the-source-on-Airbyte">&#182;</a></h2>
+<h2 id="3.-Set-up-the-source-on-Airbyte-">3. Set up the source on Airbyte <a id="3" /><a class="anchor-link" href="#3.-Set-up-the-source-on-Airbyte-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14730,7 +14788,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.-Preparing-the-database">4. Preparing the database<a class="anchor-link" href="#4.-Preparing-the-database">&#182;</a></h2>
+<h2 id="4.-Preparing-the-database-">4. Preparing the database <a id="4" /><a class="anchor-link" href="#4.-Preparing-the-database-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14741,7 +14799,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.1-Using-Docker">4.1 Using Docker<a class="anchor-link" href="#4.1-Using-Docker">&#182;</a></h3>
+<h3 id="4.1-Using-Docker-">4.1 Using Docker <a id="41" /><a class="anchor-link" href="#4.1-Using-Docker-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14766,7 +14824,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.2-Dockerfile-build">4.2 Dockerfile build<a class="anchor-link" href="#4.2-Dockerfile-build">&#182;</a></h3>
+<h3 id="4.2-Dockerfile-build-">4.2 Dockerfile build <a id="42" /><a class="anchor-link" href="#4.2-Dockerfile-build-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14812,7 +14870,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.3-Creating-image-and-container-on-Docker">4.3 Creating image and container on Docker<a class="anchor-link" href="#4.3-Creating-image-and-container-on-Docker">&#182;</a></h3>
+<h3 id="4.3-Creating-image-and-container-on-Docker-">4.3 Creating image and container on Docker <a id="43" /><a class="anchor-link" href="#4.3-Creating-image-and-container-on-Docker-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14841,7 +14899,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.4-Accessing-the-database">4.4 Accessing the database<a class="anchor-link" href="#4.4-Accessing-the-database">&#182;</a></h3>
+<h3 id="4.4-Accessing-the-database-">4.4 Accessing the database <a id="44" /><a class="anchor-link" href="#4.4-Accessing-the-database-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14867,7 +14925,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="5.-Set-up-the-destination-on-Airbyte">5. Set up the destination on Airbyte<a class="anchor-link" href="#5.-Set-up-the-destination-on-Airbyte">&#182;</a></h2>
+<h2 id="5.-Set-up-the-destination-on-Airbyte-">5. Set up the destination on Airbyte <a id="5" /><a class="anchor-link" href="#5.-Set-up-the-destination-on-Airbyte-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14891,7 +14949,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="6.-Set-up-the-connection-on-Airbyte">6. Set up the connection on Airbyte<a class="anchor-link" href="#6.-Set-up-the-connection-on-Airbyte">&#182;</a></h2>
+<h2 id="6.-Set-up-the-connection-on-Airbyte-">6. Set up the connection on Airbyte <a id="6" /><a class="anchor-link" href="#6.-Set-up-the-connection-on-Airbyte-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14947,7 +15005,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="7.-Data-transform">7. Data transform<a class="anchor-link" href="#7.-Data-transform">&#182;</a></h2>
+<h2 id="7.-Data-transform-">7. Data transform <a id="7" /><a class="anchor-link" href="#7.-Data-transform-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14980,7 +15038,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.1-Function-that-returns-the-sprint-day-count">7.1 Function that returns the sprint day count<a class="anchor-link" href="#7.1-Function-that-returns-the-sprint-day-count">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">cont_dias_sprint</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
+<h3 id="7.1-Function-that-returns-the-sprint-day-count-">7.1 Function that returns the sprint day count <a id="71" /><a class="anchor-link" href="#7.1-Function-that-returns-the-sprint-day-count-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">cont_dias_sprint</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
 <span class="k">RETURNS</span><span class="w"> </span><span class="k">SETOF</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w"></span>
 <span class="c1">-- Select the number of Sprint days minus 1 for division in the planned column</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">intervalo</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
@@ -15005,7 +15063,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.2-Function-that-returns-the-estimated-total-hours-of-the-sprint">7.2 Function that returns the estimated total hours of the sprint<a class="anchor-link" href="#7.2-Function-that-returns-the-estimated-total-hours-of-the-sprint">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">estimado_total</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
+<h3 id="7.2-Function-that-returns-the-estimated-total-hours-of-the-sprint-">7.2 Function that returns the estimated total hours of the sprint <a id="72" /><a class="anchor-link" href="#7.2-Function-that-returns-the-estimated-total-hours-of-the-sprint-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">estimado_total</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
 <span class="k">RETURNS</span><span class="w"> </span><span class="k">SETOF</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w"></span>
 <span class="c1">-- Sum the estimate for each card and bring it into relation with the sprint</span>
 <span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">((</span><span class="k">CAST</span><span class="p">((</span><span class="n">i</span><span class="p">.</span><span class="n">fields</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s1">&#39;timeoriginalestimate&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">))</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span><span class="w"></span>
@@ -15027,7 +15085,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.3-Function-that-determines-ideal-planning-line">7.3 Function that determines ideal planning line<a class="anchor-link" href="#7.3-Function-that-determines-ideal-planning-line">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">planejado_ideal</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
+<h3 id="7.3-Function-that-determines-ideal-planning-line-">7.3 Function that determines ideal planning line <a id="73" /><a class="anchor-link" href="#7.3-Function-that-determines-ideal-planning-line-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">planejado_ideal</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">)</span><span class="w"></span>
 <span class="k">RETURNS</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">(</span><span class="n">dia</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span><span class="n">planejado</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w"></span>
 
 <span class="k">DECLARE</span><span class="w"></span>
@@ -15071,7 +15129,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.4-Function-that-calculates-remaining-hours">7.4 Function that calculates remaining hours<a class="anchor-link" href="#7.4-Function-that-calculates-remaining-hours">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">horas_restantes</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span><span class="w"> </span><span class="n">prev_horas_entregues</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">,</span><span class="w"> </span><span class="n">datas</span><span class="w"> </span><span class="nb">DATE</span><span class="p">)</span><span class="w"></span>
+<h3 id="7.4-Function-that-calculates-remaining-hours-">7.4 Function that calculates remaining hours <a id="74" /><a class="anchor-link" href="#7.4-Function-that-calculates-remaining-hours-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">horas_restantes</span><span class="p">(</span><span class="n">sprint_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span><span class="w"> </span><span class="n">prev_horas_entregues</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">,</span><span class="w"> </span><span class="n">datas</span><span class="w"> </span><span class="nb">DATE</span><span class="p">)</span><span class="w"></span>
 <span class="k">RETURNS</span><span class="w"> </span><span class="k">TABLE</span><span class="p">(</span><span class="n">dia</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span><span class="n">horas_restantes</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w"></span>
 
 <span class="k">DECLARE</span><span class="w"></span>
@@ -15129,7 +15187,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.5-View">7.5 View<a class="anchor-link" href="#7.5-View">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">vw_dadosburndown</span><span class="w"> </span><span class="k">AS</span><span class="w"></span>
+<h3 id="7.5-View-">7.5 View <a id="75" /><a class="anchor-link" href="#7.5-View-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">vw_dadosburndown</span><span class="w"> </span><span class="k">AS</span><span class="w"></span>
 <span class="k">WITH</span><span class="w"> </span><span class="n">dados_sprint</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
 <span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sprint</span><span class="p">,</span><span class="w"> </span>
@@ -15184,7 +15242,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="8.-Data-visualization">8. Data visualization<a class="anchor-link" href="#8.-Data-visualization">&#182;</a></h2>
+<h2 id="8.-Data-visualization-">8. Data visualization <a id="8" /><a class="anchor-link" href="#8.-Data-visualization-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15208,7 +15266,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="8.1-Connection-to-PowerBi">8.1 Connection to PowerBi<a class="anchor-link" href="#8.1-Connection-to-PowerBi">&#182;</a></h3>
+<h3 id="8.1-Connection-to-PowerBi-">8.1 Connection to PowerBi <a id="81" /><a class="anchor-link" href="#8.1-Connection-to-PowerBi-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15258,7 +15316,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="8.2-Burndown-with-Time-Spent-Chart">8.2 Burndown with Time Spent Chart<a class="anchor-link" href="#8.2-Burndown-with-Time-Spent-Chart">&#182;</a></h3>
+<h3 id="8.2-Burndown-with-Time-Spent-Chart-">8.2 Burndown with Time Spent Chart <a id="82" /><a class="anchor-link" href="#8.2-Burndown-with-Time-Spent-Chart-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15293,7 +15351,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="9.-Updating-the-data">9. Updating the data<a class="anchor-link" href="#9.-Updating-the-data">&#182;</a></h2>
+<h2 id="9.-Updating-the-data-">9. Updating the data <a id="9" /><a class="anchor-link" href="#9.-Updating-the-data-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15317,7 +15375,7 @@ RUN chmod +x /tmp/create_view.sh
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.1-Command-to-delete-view-(drop_view.sh)">9.1 Command to delete view (drop_view.sh)<a class="anchor-link" href="#9.1-Command-to-delete-view-(drop_view.sh)">&#182;</a></h3><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<h3 id="9.1-Command-to-delete-view-(drop_view.sh)-">9.1 Command to delete view (drop_view.sh) <a id="91" /><a class="anchor-link" href="#9.1-Command-to-delete-view-(drop_view.sh)-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Set environment variables for PostgreSQL</span>
 <span class="nb">export</span> <span class="nv">PGHOST</span><span class="o">=</span>localhost
@@ -15339,7 +15397,7 @@ psql -c <span class="s2">&quot;DROP VIEW public.vw_dadosburndown;&quot;</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.2-Command-to-create-view-(create_view.sh)">9.2 Command to create view (create_view.sh)<a class="anchor-link" href="#9.2-Command-to-create-view-(create_view.sh)">&#182;</a></h3><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<h3 id="9.2-Command-to-create-view-(create_view.sh)-">9.2 Command to create view (create_view.sh) <a id="92" /><a class="anchor-link" href="#9.2-Command-to-create-view-(create_view.sh)-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Set environment variables for PostgreSQL</span>
 <span class="nb">export</span> <span class="nv">PGHOST</span><span class="o">=</span>localhost
@@ -15407,7 +15465,7 @@ psql -c <span class="s2">&quot;</span><span class="nv">$VIEW_DEFINITION</span><s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.3-Scheduling-command-in-CRON-(crontab)">9.3 Scheduling command in CRON (crontab)<a class="anchor-link" href="#9.3-Scheduling-command-in-CRON-(crontab)">&#182;</a></h3><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">3</span> * * <span class="m">1</span>-5 /tmp/drop_view.sh &gt;&gt; /tmp/cron_drop.log <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<h3 id="9.3-Scheduling-command-in-CRON-(crontab)-">9.3 Scheduling command in CRON (crontab) <a id="93" /><a class="anchor-link" href="#9.3-Scheduling-command-in-CRON-(crontab)-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="m">0</span> <span class="m">3</span> * * <span class="m">1</span>-5 /tmp/drop_view.sh &gt;&gt; /tmp/cron_drop.log <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 <span class="m">0</span> <span class="m">5</span> * * <span class="m">1</span>-5 /tmp/create_view.sh &gt;&gt; /tmp/cron_create.log <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
 </pre></div>
 
@@ -15434,7 +15492,7 @@ psql -c <span class="s2">&quot;</span><span class="nv">$VIEW_DEFINITION</span><s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.4-Starting-CRON-in-the-container">9.4 Starting CRON in the container<a class="anchor-link" href="#9.4-Starting-CRON-in-the-container">&#182;</a></h3>
+<h3 id="9.4-Starting-CRON-in-the-container-">9.4 Starting CRON in the container <a id="94" /><a class="anchor-link" href="#9.4-Starting-CRON-in-the-container-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15462,7 +15520,7 @@ psql -c <span class="s2">&quot;</span><span class="nv">$VIEW_DEFINITION</span><s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.5-Scheduling-update-in-Airbyte">9.5 Scheduling update in Airbyte<a class="anchor-link" href="#9.5-Scheduling-update-in-Airbyte">&#182;</a></h3>
+<h3 id="9.5-Scheduling-update-in-Airbyte-">9.5 Scheduling update in Airbyte <a id="95" /><a class="anchor-link" href="#9.5-Scheduling-update-in-Airbyte-">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15487,7 +15545,7 @@ psql -c <span class="s2">&quot;</span><span class="nv">$VIEW_DEFINITION</span><s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="10.-Conclusion">10. Conclusion<a class="anchor-link" href="#10.-Conclusion">&#182;</a></h2>
+<h2 id="10.-Conclusion-">10. Conclusion <a id="10" /><a class="anchor-link" href="#10.-Conclusion-">&#182;</a></h2>
 </div>
 </div>
 </div>
