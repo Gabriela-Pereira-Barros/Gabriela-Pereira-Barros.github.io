@@ -247,7 +247,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.4);
+  background: rgba(5, 13, 24, 0.3);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -275,7 +275,7 @@ h6 {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
-  padding-bottom: 60%;
+  /*padding-bottom: 60%;*/
 }
 
 
@@ -283,7 +283,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #2c554f;
 }
 
 @media (min-width: 1024px) {
