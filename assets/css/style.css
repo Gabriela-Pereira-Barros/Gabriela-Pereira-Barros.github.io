@@ -1133,6 +1133,9 @@ section {
 # Inner-page
 --------------------------------------------------------------*/
 .inner-page {
-  padding: 20px 0;
-  height: 750px;
+  height: 100vh; /* 100% da altura da janela de visualização */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
