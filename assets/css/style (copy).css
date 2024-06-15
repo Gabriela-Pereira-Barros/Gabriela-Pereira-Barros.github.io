@@ -191,16 +191,16 @@ h6 {
 }
 
 .nav-menu a:hover,
-/*.nav-menu .active,*/
-/*.nav-menu .active:focus,*/
+.nav-menu .active,
+.nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
 
 .nav-menu a:hover i,
-/*.nav-menu .active i,*/
-/*.nav-menu .active:focus i,*/
+.nav-menu .active i,
+.nav-menu .active:focus i,
 .nav-menu li:hover>a i {
   color: #2c554f;
 }
@@ -244,18 +244,23 @@ h6 {
 
 .nav-menu a .toggle-dropdown,
 .nav-menu a:focus .toggle-dropdown {
-  font-size: 15px;
-  padding-left: 3px;
-  padding-top: 3px;
-  color: #fff;
+  font-size: 12px;
+  line-height: 0;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  flex-shrink: 0;
+  background-color: color-mix(in srgb, #2c554f, transparent 90%);
 }
 
 .nav-menu a .toggle-dropdown:hover,
 .nav-menu a:focus .toggle-dropdown:hover {
-  font-size: 17px;
-  transition: 0.3s;
-  padding-left: 3px;
-  padding-top: 3px;
+  background-color: #2c554f;
   color: #fff;
 }
 
@@ -267,7 +272,7 @@ h6 {
 
 .nav-menu .active .toggle-dropdown,
 .nav-menu .active:focus .toggle-dropdown {
-  font-size: 17px;
+  background-color: #2c554f;
   color: #fff;
   transform: rotate(180deg);
 }
@@ -291,7 +296,7 @@ h6 {
   position: static;
   display: none;
   z-index: 99;
-  padding: 0px 10px;
+  padding: 5px 10px;
   margin: 5px 10px;
   background-color: #fff;
   border: 1px solid color-mix(in srgb, #2c554f, transparent 90%);
