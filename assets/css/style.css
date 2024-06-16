@@ -299,12 +299,28 @@ h6 {
   transition: all 0.5s ease-in-out;
 }
 
+.nav-menu .dropdown-innerpage ul {
+  position: static;
+  display: block;
+  z-index: 99;
+  padding: 0px 10px;
+  margin: 5px 10px;
+  border: 2px solid color-mix(in srgb, #2c554f, transparent 50%);
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
 .nav-menu .dropdown ul ul {
   background-color: rgba(33, 37, 41, 0.1);
 }
 
 .nav-menu .dropdown>.dropdown-active {
   display: block;
+  background-color: rgba(33, 37, 41, 0.03);
+}
+
+.nav-menu .dropdown-innerpage>.dropdown-active {
+  display: none;
   background-color: rgba(33, 37, 41, 0.03);
 }
 
@@ -1167,8 +1183,6 @@ section {
   font-size: 13px;
   text-align: center;
 }
-
-
 
 /*--------------------------------------------------------------
 # Sumário
