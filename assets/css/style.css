@@ -902,6 +902,11 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
+.testimonials .testimonials-subitem {
+  font-size: 14px;
+}
+
+
 .testimonials .testimonial-item p::after {
   content: "";
   width: 0;
