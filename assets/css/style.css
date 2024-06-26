@@ -252,7 +252,7 @@ h6 {
 
 .nav-menu a .toggle-dropdown:hover,
 .nav-menu a:focus .toggle-dropdown:hover {
-  font-size: 17px;
+  font-size: 15px;
   transition: 0.3s;
   padding-left: 3px;
   padding-top: 3px;
@@ -267,7 +267,7 @@ h6 {
 
 .nav-menu .active .toggle-dropdown,
 .nav-menu .active:focus .toggle-dropdown {
-  font-size: 17px;
+  font-size: 15px;
   color: #fff;
   transform: rotate(180deg);
 }
@@ -823,6 +823,7 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  color: #7a7d30;
 }
 
 .services .title a {
